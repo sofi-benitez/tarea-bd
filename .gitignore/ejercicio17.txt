@@ -10,7 +10,7 @@ create table autos(
   primary key(patente)
  );
  
-use table autos;
+use autos;
 
 insert into autos (patente,marca,modelo,precio)
   values('ACD123','Fiat 128','1970',15000);
@@ -26,6 +26,39 @@ insert into autos (patente,marca,modelo,precio)
   values('BVF543','Fiat 128','1975',20000);
   
 select * from autos 
-   where modelo='1990';
+   where modelo = '1990';
 select * from autos
-   where precio>50000;
+   where precio > 50000;
+   
+exit;
+   
+-----------------------Segundo Problema-----------------------
+
+create database empresa;
+use empresa;
+
+create table clientes(
+  documento char(8),
+  apellido varchar(20),
+  nombre varchar(20),
+  domicilio varchar(30),
+  telefono varchar (11),
+  primary key(documento)
+ );
+ 
+insert into clientes (documento,apellido,nombre,domicilio,telefono)
+  values('2233344','Perez','Juan','Sarmiento 980','4342345');
+insert into clientes (documento,apellido,nombre,domicilio)
+  values('2333344','Perez','Ana','Colon 234');
+insert into clientes (documento,apellido,nombre,domicilio,telefono)
+  values('2433344','Garcia','Luis','Avellaneda 1454','4558877');
+insert into clientes (documento,apellido,nombre,domicilio,telefono)
+  values('2533344','Juarez','Ana','Urquiza 444','4789900');
+  
+select * from clientes
+    where apellido = 'Perez';
+    
+select  apellido, domicilio y teléfono from clientes
+    where nombre =  'Ana';
+    
+exit;
