@@ -71,7 +71,7 @@ insert into empleados(nombre,documento,sexo,domicilio,fechaingreso)
 
 insert into empleados(nombre,documento,sexo,domicilio,fechaingreso)
   values('Ana Juarez','31123123','f',null,'19900306');
-  //carga sin fecha
+  //carga
 
 insert into empleados
   values('Juan Mores','32222333','m',null,'1990-03-06 10:15');
